@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="HW8.1.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="decor">
+        <h3 class="decor_item1">Калькулятор стоимости булочки</h3>
+        <div class="container decor_item2">
+            <div>Максимальная цена
+                <div id="cost_errors"></div>
+            </div>
+            <input type="text" id="max-cost" placeholder="в рублях" />
+            <div>Виды булочек</div>
+            <span class="custom-dropdown ">
+                <select class="big" id="type-of-cupcake">
+                    <option value="10">Кексик</option>
+                    <option value="12">Слойка</option>
+                    <option value="14">Ватрушка</option>
+                    <option value="18">Пончик</option>
+                </select>
+            </span>
+            <div>Тип посыпки</div>
+            <div>
+                <div class="form_radio type">
+                    <input id="type-1" type="radio" name="topping" value="24" checked>
+                    <label for="type-1">Шоколад</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="type-2" type="radio" name="topping" value="27">
+                    <label for="type-2">Канфети</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="type-3" type="radio" name="topping" value="23">
+                    <label for="type-3">Карамель</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="type-4" type="radio" name="topping" value="35">
+                    <label for="type-4">Гавайская соль с карамелью</label>
+                </div>
+            </div>
+            <div>Тип теста</div>
+            <div>
+                <div class="form_radio dough">
+                    <input id="dough-1" type="radio" name="dough" value="31" checked>
+                    <label for="dough-1">Слоёное</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="dough-2" type="radio" name="dough" value="30">
+                    <label for="dough-2">Сдобное</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="dough-3" type="radio" name="dough" value="29">
+                    <label for="dough-3">На дрожжах</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="dough-4" type="radio" name="dough" value="50">
+                    <label for="dough-4">Безглютеновое</label>
+                </div>
+            </div>
+            <div>Размер булочки
+                <div id="size_errors"></div>
+            </div>
+            <input type="text" placeholder="в см" id="size" />
+            <div>Свежесть булочки</div>
+            <div>
+                <div class="form_radio fresh">
+                    <input id="fresh-1" type="radio" name="fresh" value="0" checked>
+                    <label for="fresh-1">Сегодняшняя</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="fresh-2" type="radio" name="fresh" value="15">
+                    <label for="fresh-2">Вчерашняя вечерняя (-15%)</label>
+                </div>
+
+                <div class="form_radio">
+                    <input id="fresh-3" type="radio" name="fresh" value="30">
+                    <label for="fresh-3">Вчерашняя утренняя (-30%)</label>
+                </div>
+            </div>
+            <div>Тип оплаты</div>
+            <div>
+                <div class="form_radio payment">
+                    <input id="payment-1" type="radio" name="payment" value="5" checked>
+                    <label for="payment-1">Наличные (-5%)</label>
+                </div>
+                <div class="form_radio">
+                    <input id="payment-2" type="radio" name="payment" value="0">
+                    <label for="payment-2">Безналичные</label>
+                </div>
+            </div>
+
+            <div id="result" class="container_item1"></div>
+            <input id="button" type="submit" value="Отправить" class="container_item2">
+        </div>
+
+    </form>
+
+    <script src="HW8.1.js">
+    </script>
+</body>
+
+</html>
